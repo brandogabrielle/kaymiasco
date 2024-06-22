@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyStreak Login</title>
+    <link rel="stylesheet" href="homelog.css">
+</head>
+<body>
+    <div class="top-section">
+        <!-- Content for the top section goes here -->
+    </div>
+    <div class="gray-line"></div>
+    <div class="main-content">
+        <!-- Main content goes here -->
+
+    <div class="center">
+    <button id="show-login">Login</button>
+</div>
+
+<div class="popup"> 
+    <div class="close-btn">&times;</div>
+    <form action="homelog.php" method="post">
+    <div class="form-element">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-element">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter Password">
+    </div>
+        <div class="form-element">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+    <div class="form-element">
+        <button type="submit">Sign in</button>
+    </form>
+    </div>
+    <div class="form-element"></div>
+        <a href="#">Forgot password?</a>
+</div>
+<script src="loginjs.js"></script>
+</body>
+</html>
+
