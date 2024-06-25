@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.con1{
+    height: 10%; /* Adjust to 10% or 15% as needed */
+    background-color: #ffffff; /* Gray color for the line */
+    width: 100%;
+    margin: 0px;
+    justify-content: space-between;
+
+
+}
+
+.e{
+    margin-top: 0%;
+    margin-bottom: 3px;
+    display: flex; 
+    justify-content: space-between; 
+}
+.q{
+    margin-top: 0%;
+    margin-bottom: 3px;
+
+    display: flex; 
+    justify-content: space-between; 
+}
+.w{
+    height: 1px; /* Thickness of the gray line */
+    margin-bottom: 10%;
+    background-color: #808080; /* Gray color for the line */
+    width: 100%;
+}
+body{
+    margin: 0px;
+
+}
+
+.r{
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+   margin: 0 10px;
+}
+
+/* CALENDAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.wrapper {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+header .icons {
+  display: flex;
+}
+
+header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+header .icons span:hover {
+  background: #f2f2f2;
+}
+
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #9B59B6;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+.day.agenda {
+  background-color: #ffc107;
+}
+
+#agenda-popup {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* POMODORO */
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+
+  --color-primary: hsl(235, 35%, 19%);
+  --color-secondary: hsl(358, 78%, 69%);
+  --color-font: hsla(0, 0%, 100%, 0.902);
+
+  --color-shadow: hsl(235, 36%, 35%);
+}
+section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  width: min(42.5rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.painel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  width: 20rem;
+  margin-block: 5rem;
+  padding: 1rem;
+  border-radius: 10rem;
+  -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow); 
+  box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+.painel p {
+  opacity: .8;
+  transition: 1s ease-in;
+}
+
+.painel p.active {
+  opacity: 1;
+  color: var(--color-secondary);
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow); 
+  box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  position: relative;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.time {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.time p {
+  font-size: 5.6rem;
+}
+
+.time p:nth-of-type(2) {
+  position: relative;
+  top: -.5rem;
+  margin-inline: 1rem;
+}
+
+.controls {
+  margin-top: 3rem;
+}
+
+.controls button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.controls #reset {
+  display: none;
+}
